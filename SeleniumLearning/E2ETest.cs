@@ -31,7 +31,7 @@ namespace SeleniumLearning
         [Test]
         public void EndToEndFlow()
         {
-            String[] expectedProducts = { "iphone X", "Blackerry" };
+            String[] expectedProducts = { "iphone X", "Blackberry" };
             driver.FindElement(By.Id("username")).SendKeys("rahulshettyacademy");
             driver.FindElement(By.Name("password")).SendKeys("learning");
             driver.FindElement(By.XPath("//div[@class='form-group'][5]/label/span/input")).Click();
@@ -46,7 +46,7 @@ namespace SeleniumLearning
 
                 if(expectedProducts.Contains(product.FindElement(By.CssSelector(".card-title a")).Text))
                     {
-                    product.FindElement(By.CssSelector(".card-foorter button")).Click();
+                    product.FindElement(By.CssSelector(".card-footer button")).Click();
                     }
                 //product.FindElement(By.XPath("//app-card[1]//div[1]//div[2]//button[1]")).Click();
                 //product.FindElement(By.XPath("//app-card[2]//div[1]//div[2]//button[1]")).Click();
